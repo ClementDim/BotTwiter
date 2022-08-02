@@ -27,7 +27,7 @@ function main() {
     if (err) throw err;
   });
 
-  postWeatherTweet().then(() => setInterval(postWeatherTweet, 600000));
+  postWeatherTweet().then(() => setInterval(postWeatherTweet, 1800000));
 }
 
 const post = async (txt, medias = []) => {
