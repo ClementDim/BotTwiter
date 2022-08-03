@@ -52,9 +52,9 @@ const post = async (txt, medias = []) => {
   }catch (err) {
     throw err;
   }
-
   return true;
 }
+
 const postWeatherTweet = async () => {
   const weather = await getWeather();
   await post("Il fait "+weather.temperature+"°C à "+weather.location+", le "+date.format(weather.time, 'DD/MM/YYYY à HH:mm')+" (heure locale)", [weather.medias]);

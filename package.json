@@ -6,19 +6,19 @@
   "type": "module",
   "scripts": {
     "twit": "node index.js",
-    "sdk": "node twitter-api-sdk-test.js"
+    "sdk": "node twitter-api-sdk-test.js",
+    "news": "node rss_news/index.js"
   },
   "keywords": [],
   "author": "ClementDimanchin",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
+    "date-and-time": "^2.4.1",
     "dotenv": "^16.0.1",
     "request": "^2.88.2",
     "twit": "^2.2.11",
     "twitter-api-sdk": "^1.1.0",
-    "axios": "^0.27.2",
-    "date-and-time": "^2.4.1"
-  },
-  "devDependencies": {
+    "xml2json": "^0.12.0"
   }
 }
