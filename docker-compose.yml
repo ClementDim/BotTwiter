@@ -1,0 +1,40 @@
+version: "3.3"
+services:
+#  newsbot-db:
+#    image: mysql:latest
+#    volumes:
+#      - ./db_data:/var/lib/mysql
+#    restart: on-failure
+#    environment:
+#      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+#      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+#      MYSQL_USER: "${MYSQL_USER}"
+#      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+#  newsbot-pma:
+#    image: phpmyadmin:latest
+#    restart: on-failure
+#    ports:
+#      - "8081:8080"
+#    environment:
+#      PMA_ARBITRARY: 1
+#      PMA_HOST: db
+#      PMA_PORT: 3306
+#      MYSQL_ROOT_PASSWORD : "${MYSQL_ROOT_PASSWORD}"
+  newsbot-app:
+    build:
+      dockerfile: Dockerfile
+      context: ./
+#    depends_on:
+#      - newsbot-db
+    volumes:
+      - .:/home/node/
+    ports:
+      - "80:3000"
+    restart: on-failure
+    environment:
+#      DB_HOST: newsbot-db:3306
+      DB_USER: "${MYSQL_USER}"
+      DB_PASSWORD: "${MYSQL_PASSWORD}"
+      DB_NAME: "${MYSQL_DATABASE}"
+volumes:
+  db_data:

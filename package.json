@@ -5,16 +5,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "twit": "node index.js",
-    "sdk": "node twitter-api-sdk-test.js"
+    "start": "node app/main.js"
   },
   "keywords": [],
   "author": "ClementDimanchin",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
-    "request": "^2.88.2",
-    "twit": "^2.2.11",
+    "request": "1.1.20",
+    "rss-parser": "^3.12.0",
+    "twit": "^1.1.20",
     "twitter-api-sdk": "^1.1.0"
   },
   "devDependencies": {
