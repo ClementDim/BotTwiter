@@ -1,5 +1,5 @@
 # BotTwiter
-@DevNewsTool
+@DevNewsTool (_J'ai pris un retard de fou mais un jour je fini_)
 
 ## DotEnv file settings
 ```dotenv
